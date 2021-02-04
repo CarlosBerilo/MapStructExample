@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<body style="margin: 20px;">
+	<h2>Avaliação de frameworks java de mapeamento Data Transfer
+		Object (DTO) .</h2>
+	<p>Indicadores: Facilidade de aprendizagem e utilização.</p>
+	<p>Referência ->
+		https://www.baeldung.com/java-performance-mapping-frameworks</p>
+
+	<p />
+	Frameworks
+	<ul>
+		<li>1- Dozer (2019) - requer arquivo de mapeamento XML</li>
+		<li>3- JMapper (2016)</li>
+		<li>4- Orika (fev - 2019) 			
+		     <ul>
+				<li> orika-core</li>
+				</ul>
+		<li>2- ModelMapper(2020) 			
+		     <ul>
+				<li> modelmapper</li>
+			</ul>	
+		<li>5- MapStruct (2020)
+			<ul>
+				<li>- mapstruct</li>
+				<li>- mapstruct-processor</li>
+				<li>- Fazer configuração de plugin no pom.xml</li>
+				<li>- Fazer o build para gerar arquivo.</li>
+		</li>
+	</ul>
+	</ul>
+
+	<h3>Testes realizados pelo baeldung</h3>
+
+	<h4>- Tempo médio de execução (em ms por operação)</h4>
+	Obs: tempo médio de execução (quanto menor, melhor)
+	<table style="width: 50%" class="table">
+		<tr>
+			<td>MapStruct</td>
+			<td>10 -5</td>
+		</tr>
+		<tr>
+			<td>JMapper</td>
+			<td>10 -5</td>
+		</tr>
+		<tr>
+			<td>Orika</td>
+			<td>0,001</td>
+		</tr>
+		<tr>
+			<td>ModelMapper</td>
+			<td>0,001</td>
+		</tr>
+		<tr>
+			<td>Dozer</td>
+			<td>0,002</td>
+		</tr>
+	</table>
+
+
+
+
+	<h4>- Taxa de transferência :</h4>
+
+	Obs: Taxa de transferência (em operações por ms), quanto mais, melhor
+ 
+	<table style="width: 50%" class="table">
+		<tr>
+			<td>MapStruct</td>
+			<td>133719</td>
+		</tr>
+		<tr>
+			<td>JMapper</td>
+			<td>106978</td>
+		</tr>
+		<tr>
+			<td>Orika</td>
+			<td>1800</td>
+		</tr>
+		<tr>
+			<td>ModelMapper</td>
+			<td>978</td>
+		</tr>
+		<tr>
+			<td>Dozer</td>
+			<td>471</td>
+		</tr>
+	</table>
+
+	<h4>- Tempo de disparo único (SingleShotTime)</h4>
+	Obs: Nome da estrutura Tempo de disparo único (em ms por operação)
+	
+	<table style="width: 50%" class="table">
+		<tr>
+			<td>JMapper</td>
+			<td>0,015</td>
+		</tr>
+		<tr>
+			<td>MapStruct</td>
+			<td>0,450</td>
+		</tr>
+		<tr>
+			<td>Dozer</td>
+			<td>2.094</td>
+		</tr>
+		<tr>
+			<td>Orika</td>
+			<td>2.898</td>
+		</tr>
+		<tr>
+			<td>ModelMapper</td>
+			<td>4.837</td>
+		</tr>
+	</table>
+
+	<h4>Tempo da amostra (SampleTime)</h4>
+	Obs: Tempo de amostra (em milissegundos por operação)
+
+	<table style="width: 50%" class="table">
+		<tr>
+			<td>Framework Name</td>
+			<td>p0.90</td>
+			<td>p0.999</td>
+			<td>p1.0</td>
+		</tr>
+		<tr>
+			<td>JMapper</td>
+			<td>10 -4</td>
+			<td>0,001</td>
+			<td>2,6</td>
+		</tr>
+		<tr>
+			<td>MapStruct</td>
+			<td>10 -4</td>
+			<td>0,001</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>Orika</td>
+			<td>0,001</td>
+			<td>0,010</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>ModelMapper</td>
+			<td>0,002</td>
+			<td>0,015</td>
+			<td>3,2</td>
+		</tr>
+		<tr>
+			<td>Dozer</td>
+			<td>0,003</td>
+			<td>0,021</td>
+			<td>25</td>
+		</tr>
+	</table>
+
+</body>
+</html>
